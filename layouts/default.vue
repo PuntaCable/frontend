@@ -9,10 +9,11 @@
 
 <script>
 import Header from "../components/Header.vue";
+import Card from "../components/Card.vue";
 export default {
     data() {
         return {};
     },
-    components: { Header }
+    components: { Header, Card }
 }
 </script>
