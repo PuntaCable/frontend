@@ -3,13 +3,12 @@
     <v-toolbar>
       <v-toolbar-title>
         <img src="../static/orange-logo.png" alt="" width="120">
-  
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items>
-          <v-img src="/play-btn.svg" alt="" width="120" contain height="50" class="mt-md-2"/>
-          <img src="/+television.png" alt="" width="120" contain height="35" class="rounded-pill mt-md-4"/>
-          <img src="/turnos-btn.svg" alt="" width="120" contain height="50" class="mt-md-2"/>
+          <v-img contain src="/play-btn.svg" alt="" width="120" height="50" class="mt-md-2"/>
+          <v-img contain src="/+television.png" alt="" width="90"  height="35" class=" mt-md-4 rounded-xl "/>
+          <v-img contain src="/turnos-btn.svg" alt="" width="120" height="50" class="mt-md-2 rounded-pill"/>
       </v-toolbar-items>
     </v-toolbar>
     <v-divider></v-divider>
