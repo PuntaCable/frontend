@@ -1,5 +1,5 @@
 <template>
-        <v-card class="bg mb-12">
+        <v-card class="bg mb-md-12 pl-md-6">
             <h1 class="text-xl">Centro de ayuda</h1>
             <br>
             <h2>¿En qué podemos ayudarte hoy?</h2>
