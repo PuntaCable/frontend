@@ -10,7 +10,7 @@
     ></v-carousel-item>
   </v-carousel>
 
-    <v-container class="">
+    <v-container class="d-flex flex-wrap">
       <v-row class="justify-center">
         <v-col class="col-md-4 ">
           <Card>
@@ -105,8 +105,8 @@
 
     <CentroAyuda></CentroAyuda>
 
-    <v-container class="d-flex ">
-      <v-row class="justify-space-around ml-md-16 mr-md-16 text-center">
+    <v-container v-if="isMobile == false" class="d-flex ">
+      <v-row class="justify-space-around ml-md-16 mr-md-16 text-center ">
         <v-card elevation="0" class="flex-column pt-md-6">
           <v-btn color="primary" x-large fab><v-icon>mdi-book-open</v-icon></v-btn>
           <v-card-text>Instructivos y manuales</v-card-text>
@@ -124,7 +124,27 @@
       </v-row>
       
     </v-container>
+
+    <v-container v-else class="d-flex ">
+      <v-row class="justify-space-around ml-md-16 mr-md-16 text-center flex-column ">
+        <v-card elevation="0" class="flex-column pt-md-6">
+          <v-btn color="primary" x-large fab><v-icon>mdi-book-open</v-icon></v-btn>
+          <v-card-text>Instructivos y manuales</v-card-text>
+        </v-card>
+        
+        <v-card elevation="0" class="pt-md-6">
+          <v-btn color="primary"  x-large fab><v-icon>mdi-help</v-icon></v-btn>
+          <v-card-text>Preguntas frecuentes</v-card-text>
+        </v-card>
+
+        <v-card elevation="0" class="pt-md-6">
+          <v-btn color="primary"  x-large fab><v-icon>mdi-tools</v-icon></v-btn>
+          <v-card-text>Asistencia Técnica</v-card-text>
+        </v-card>
+      </v-row>
+    </v-container>
     
+
 
     <v-container class="d-flex flex-column align-center">
       <v-img src="https://puntacable.com.uy/assets/img/dispositivos-play.png"></v-img>
@@ -167,6 +187,10 @@ export default {
         };
     },
     name: "IndexPage",
-    components: {generalFooter}
+    components: {generalFooter},
+    computed: {
+    isMobile() {
+      return this.$vuetify.breakpoint.smAndDown
+    }}
 }
 </script>

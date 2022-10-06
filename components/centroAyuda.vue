@@ -4,7 +4,7 @@
             <br>
             <h2>¿En qué podemos ayudarte hoy?</h2>
             <br>
-            <v-text-field outlined class="half-width"></v-text-field>
+            <v-text-field outlined></v-text-field>
         </v-card>
 </template>
 
