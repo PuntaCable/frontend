@@ -127,17 +127,17 @@
 
     <v-container v-else class="d-flex ">
       <v-row class="justify-space-around ml-md-16 mr-md-16 text-center flex-column ">
-        <v-card elevation="0" class="flex-column pt-md-6">
+        <v-card elevation="0" class="flex-column pt-md-6 pt-6">
           <v-btn color="primary" x-large fab><v-icon>mdi-book-open</v-icon></v-btn>
           <v-card-text>Instructivos y manuales</v-card-text>
         </v-card>
         
-        <v-card elevation="0" class="pt-md-6">
+        <v-card elevation="0" class="pt-md-6 pt-6">
           <v-btn color="primary"  x-large fab><v-icon>mdi-help</v-icon></v-btn>
           <v-card-text>Preguntas frecuentes</v-card-text>
         </v-card>
 
-        <v-card elevation="0" class="pt-md-6">
+        <v-card elevation="0" class="pt-md-6 pt-6">
           <v-btn color="primary"  x-large fab><v-icon>mdi-tools</v-icon></v-btn>
           <v-card-text>Asistencia Técnica</v-card-text>
         </v-card>

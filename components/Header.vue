@@ -25,7 +25,8 @@
 
     <v-app-bar v-else app>
       <v-app-bar-nav-icon class="" @click="openDrawer =!openDrawer"></v-app-bar-nav-icon>
-      <v-img contain src="/orange-logo.png" alt="" height="40"></v-img>
+      <v-spacer></v-spacer>
+      <img contain src="~/static/orange-logo.png" alt="" height="40">
     </v-app-bar>
 
     <v-navigation-drawer app v-model="openDrawer" class="d-flex d-sm-none">
