@@ -1,16 +1,18 @@
 <template>
   <div>
-    <v-toolbar class="d-none d-sm-flex">
+    <v-toolbar v-if="isMobile == false">
       <v-toolbar-title>
         <img src="../static/orange-logo.png" alt="" width="120">
       </v-toolbar-title>
-      
+      <v-spacer></v-spacer>
       <v-toolbar-items class="align-center">
           <v-img contain src="/play-btn.svg" alt="" width="120" height="50" class=""/>
           <v-img contain src="/+television.png" alt="" width="90" height="32" class="rounded-xl "/>
           <v-img contain src="/turnos-btn.svg" alt="" width="120" height="50" class="rounded-pill"/>
       </v-toolbar-items>
     </v-toolbar>
+    
+    
     <v-divider></v-divider>
     <v-app-bar v-if="isMobile == false">
       <v-toolbar-items class="d-flex justify-space-around fill-width">

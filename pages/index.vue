@@ -150,7 +150,7 @@
       <v-img src="https://puntacable.com.uy/assets/img/dispositivos-play.png"></v-img>
       <div class="d-flex align-center flex-wrap">
         <v-text class=" text-h3 text-center">Cambiate a la nueva forma de ver TV</v-text>
-        <v-img src="./puntacable-play-icon.svg"></v-img>
+        <v-img class="ml-md-2" src="./puntacable-play-icon.svg"></v-img>
       </div>
     </v-container>
 

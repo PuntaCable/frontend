@@ -81,10 +81,67 @@
               <v-list-item-content>
                 <v-list-item-title>Pack MANSA</v-list-item-title>
               </v-list-item-content>
-              
+              <v-list-item-icon>
+                <v-icon size="20">mdi-circle</v-icon>
+              </v-list-item-icon>
+              <v-list-item-content>
+                <v-list-item-title>Prepago</v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-icon>
+                <v-icon size="20">mdi-circle</v-icon>
+              </v-list-item-icon>
+              <v-list-item-content>
+                <v-list-item-title>Pack BRAVA</v-list-item-title>
+              </v-list-item-content>
+              <v-list-item-icon>
+                <v-icon size="20">mdi-circle</v-icon>
+              </v-list-item-icon>
+              <v-list-item-content>
+                <v-list-item-title>Pack Adultos</v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-icon>
+                <v-icon size="20">mdi-circle</v-icon>
+              </v-list-item-icon>
+              <v-list-item-content>
+                <v-list-item-title>Pack LA BARRA</v-list-item-title>
+              </v-list-item-content>
+              <v-list-item-icon>
+                <v-icon size="20">mdi-circle</v-icon>
+              </v-list-item-icon>
+              <v-list-item-content>
+                <v-list-item-title>Nuevo Pack VTV PLUS</v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-icon>
+                <v-icon size="20">mdi-circle</v-icon>
+              </v-list-item-icon>
+              <v-list-item-content>
+                <v-list-item-title>Pack JOSÉ IGNACIO</v-list-item-title>
+              </v-list-item-content>
+              <v-list-item-icon>
+                <v-icon size="20">mdi-circle</v-icon>
+              </v-list-item-icon>
+              <v-list-item-content>
+                <v-list-item-title>Universal Plus </v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-icon>
+                <v-icon size="20">mdi-circle</v-icon>
+              </v-list-item-icon>
+              <v-list-item-content>
+                <v-list-item-title>Pack HBO Premium</v-list-item-title>
+              </v-list-item-content>
             </v-list-item>
           </v-list>
         </v-col>
+
+        
 
         <v-col class="col-md-3">
       <v-list dense>
@@ -200,7 +257,7 @@
 
 
     <v-footer color="primary">
-      <v-row>
+      <v-row class="text-center">
         <v-text class="font-weight-light text-caption">2020 Puntacable. Todos los derechos reservados.</v-text>
       </v-row>
     </v-footer>
