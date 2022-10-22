@@ -8,7 +8,6 @@
         <v-card-text>
             <slot name="description"></slot>
         </v-card-text>
-
         <v-card-actions>
             <v-btn outlined block color="primary" class="rounded-pill align-center">Ver más</v-btn>
         </v-card-actions>

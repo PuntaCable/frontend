@@ -6,26 +6,34 @@
     <v-card-subtitle>
       <v-row v-if="isMobile == false" class="justify-space-around text-center mt-md-12">
         <v-col class="flex-column d-flex align-center">
-          <v-btn outlined height="50" width="200" color="primary">Contactanos</v-btn>
+          <v-btn to="/contacto" outlined height="50" width="200" color="primary">Contactanos</v-btn>
           <v-text class="mt-md-12 mb-md-5 text-h5">Seguinos en las redes</v-text>
           <v-row class="justify-space-around">
-            <v-img contain height="40" width="40" src="./facebook-logo-3-1.png"></v-img>
-            <v-img class="ml-md-2" contain height="40" width="40" src="./youtube.svg"></v-img>
-            <v-img class="ml-md-2" contain height="40" width="40" src="./ig.png"></v-img>
-            <v-img class="ml-md-2" contain height="40" width="40" src="./twitter.svg"></v-img>
+            <a href="https://www.facebook.com/puntacablemaldonado">
+              <v-img contain height="40" width="40"  src="/facebook-logo-3-1.png"></v-img>
+            </a>
+            <a href="https://www.youtube.com/channel/UCev-0rKQjFKeNNcygkhDjpA">
+              <v-img class="ml-md-2" contain height="40" width="40" src="/youtube.svg"></v-img>
+            </a>
+            <a href="https://twitter.com/puntacable">
+              <v-img class="ml-md-2" contain height="40" width="40" src="/twitter.svg"></v-img>
+            </a>
+            <a href="https://www.instagram.com/puntacable/">
+              <v-img class="ml-md-2" contain height="40" width="40" src="/ig.png"></v-img>
+            </a>
           </v-row>
         </v-col>
       </v-row>
       
       <v-row v-else class="justify-space-around text-center mt-md-12">
         <v-col class="flex-column d-flex align-center mt-4">
-          <v-btn outlined height="50" width="200" color="primary">Contactanos</v-btn>
+          <v-btn to="/contacto" outlined height="50" width="200" color="primary">Contactanos</v-btn>
           <v-text class="mt-6 text-h5">Seguinos en las redes</v-text>
           <v-row class="justify-space-around mt-6">
-            <v-img contain height="40" width="40" src="./facebook-logo-3-1.png"></v-img>
-            <v-img class="ml-md-2" contain height="40" width="40" src="./youtube.svg"></v-img>
-            <v-img class="ml-md-2" contain height="40" width="40" src="./ig.png"></v-img>
-            <v-img class="ml-md-2" contain height="40" width="40" src="./twitter.svg"></v-img>
+            <v-img contain height="40" width="40" src="/facebook-logo-3-1.png"></v-img>
+            <v-img class="ml-md-2" contain height="40" width="40" src="/youtube.svg"></v-img>
+            <v-img class="ml-md-2" contain height="40" width="40" src="/ig.png"></v-img>
+            <v-img class="ml-md-2" contain height="40" width="40" src="/twitter.svg"></v-img>
           </v-row>
         </v-col>
       </v-row>
@@ -72,77 +80,93 @@
             </v-list-item>
           </v-list>
         </v-col>
-        <v-col class="col-12 col-md-6">
-          <v-list>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon size="20">mdi-circle</v-icon>
-              </v-list-item-icon>
-              <v-list-item-content>
-                <v-list-item-title>Pack MANSA</v-list-item-title>
-              </v-list-item-content>
-              <v-list-item-icon>
-                <v-icon size="20">mdi-circle</v-icon>
-              </v-list-item-icon>
-              <v-list-item-content>
-                <v-list-item-title>Prepago</v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon size="20">mdi-circle</v-icon>
-              </v-list-item-icon>
-              <v-list-item-content>
-                <v-list-item-title>Pack BRAVA</v-list-item-title>
-              </v-list-item-content>
-              <v-list-item-icon>
-                <v-icon size="20">mdi-circle</v-icon>
-              </v-list-item-icon>
-              <v-list-item-content>
-                <v-list-item-title>Pack Adultos</v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon size="20">mdi-circle</v-icon>
-              </v-list-item-icon>
-              <v-list-item-content>
-                <v-list-item-title>Pack LA BARRA</v-list-item-title>
-              </v-list-item-content>
-              <v-list-item-icon>
-                <v-icon size="20">mdi-circle</v-icon>
-              </v-list-item-icon>
-              <v-list-item-content>
-                <v-list-item-title>Nuevo Pack VTV PLUS</v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon size="20">mdi-circle</v-icon>
-              </v-list-item-icon>
-              <v-list-item-content>
-                <v-list-item-title>Pack JOSÉ IGNACIO</v-list-item-title>
-              </v-list-item-content>
-              <v-list-item-icon>
-                <v-icon size="20">mdi-circle</v-icon>
-              </v-list-item-icon>
-              <v-list-item-content>
-                <v-list-item-title>Universal Plus </v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon size="20">mdi-circle</v-icon>
-              </v-list-item-icon>
-              <v-list-item-content>
-                <v-list-item-title>Pack HBO Premium</v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
-          </v-list>
-        </v-col>
+        
+        <v-row no-gutters>
+          <v-col class="col-12 col-md-6">
+            <v-list>
+              <v-list-item to="/packs/PM">
+                <v-list-item-icon>
+                  <v-icon size="20">mdi-circle</v-icon>
+                </v-list-item-icon>
+                <v-list-item-content>
+                  <v-list-item-title>Pack MANSA</v-list-item-title>
+                </v-list-item-content>
+              </v-list-item> 
+              <v-list-item to="/packs/PB">
+                <v-list-item-icon>
+                  <v-icon size="20">mdi-circle</v-icon>
+                </v-list-item-icon>
+                <v-list-item-content>
+                  <v-list-item-title>Pack BRAVA</v-list-item-title>
+                </v-list-item-content>
+              </v-list-item>
+              <v-list-item to="/packs/PLB">
+                <v-list-item-icon>
+                  <v-icon size="20">mdi-circle</v-icon>
+                </v-list-item-icon>
+                <v-list-item-content>
+                  <v-list-item-title>Pack LA BARRA</v-list-item-title>
+                </v-list-item-content>
+              </v-list-item>
+              <v-list-item to="/packs/JI">
+                <v-list-item-icon>
+                  <v-icon size="20">mdi-circle</v-icon>
+                </v-list-item-icon>
+                <v-list-item-content>
+                  <v-list-item-title>Pack JOSÉ IGNACIO</v-list-item-title>
+                </v-list-item-content>
+              </v-list-item>
+              <v-list-item to="/packs/HBO">
+                <v-list-item-icon>
+                  <v-icon size="20">mdi-circle</v-icon>
+                </v-list-item-icon>
+                <v-list-item-content>
+                  <v-list-item-title>Pack HBO Premium</v-list-item-title>
+                </v-list-item-content>
+              </v-list-item>
+            </v-list>
+          </v-col>
+  
+          <v-col class="col-12 col-md-6">
+            <v-list>
+              <v-list-item to="/packs/PP">
+                <v-list-item-icon >
+                  <v-icon size="20">mdi-circle</v-icon>
+                </v-list-item-icon>
+                <v-list-item-content>
+                  <v-list-item-title>Prepago</v-list-item-title>
+                </v-list-item-content>
+              </v-list-item>
+              <v-list-item to="/packs/adultos">
+                <v-list-item-icon >
+                  <v-icon size="20">mdi-circle</v-icon>
+                </v-list-item-icon>
+                <v-list-item-content>
+                  <v-list-item-title>Pack Adultos</v-list-item-title>
+                </v-list-item-content>
+              </v-list-item>
+              <v-list-item to="/packs/VTV PLUS">
+                <v-list-item-icon >
+                  <v-icon size="20">mdi-circle</v-icon>
+                </v-list-item-icon>
+                <v-list-item-content>
+                  <v-list-item-title>Nuevo Pack VTV PLUS</v-list-item-title>
+                </v-list-item-content>
+              </v-list-item>
+              <v-list-item to="/packs/U PLUS">
+                <v-list-item-icon >
+                  <v-icon size="20">mdi-circle</v-icon>
+                </v-list-item-icon>
+                <v-list-item-content>
+                  <v-list-item-title>Universal Plus</v-list-item-title>
+                </v-list-item-content>
+              </v-list-item>
+              
+            </v-list>
+          </v-col>
+        </v-row>
 
         
-
         <v-col class="col-md-3">
       <v-list dense>
         <v-list-item>
@@ -210,9 +234,9 @@
             <v-list-item-title>Cortes zonales</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item>
+        <v-list-item to="/contacto">
           <v-list-item-content>
-            <v-list-item-title>Contactanos</v-list-item-title>
+            <v-list-item-title >Contactanos</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
           </v-list>
@@ -254,7 +278,6 @@
         </v-col>
       </v-row>
     </v-card-text>
-
 
     <v-footer color="primary">
       <v-row class="text-center">

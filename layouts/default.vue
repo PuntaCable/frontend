@@ -3,6 +3,7 @@
     <v-main>
       <Header></Header>
       <Nuxt/>
+      <generalFooter></generalFooter>
     </v-main>
   </v-app>
 </template>

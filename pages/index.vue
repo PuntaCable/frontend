@@ -103,11 +103,17 @@
     
     <v-img src="https://puntacable.com.uy/assets/img/prepago-banner.svg"></v-img>
 
-    <CentroAyuda></CentroAyuda>
+    <v-card class="bg mb-md-12 pl-4">
+            <h1 class="text-xl">Centro de ayuda</h1>
+            <br>
+            <h2>¿En qué podemos ayudarte hoy?</h2>
+            <br>
+            <v-text-field outlined></v-text-field>
+        </v-card>
 
     <v-container v-if="isMobile == false" class="d-flex ">
       <v-row class="justify-space-around ml-md-16 mr-md-16 text-center ">
-        <v-card elevation="0" class="flex-column pt-md-6">
+        <v-card to="/centroAyuda" elevation="0" class="flex-column pt-md-6">
           <v-btn color="primary" x-large fab><v-icon>mdi-book-open</v-icon></v-btn>
           <v-card-text>Instructivos y manuales</v-card-text>
         </v-card>
@@ -122,7 +128,6 @@
           <v-card-text>Asistencia Técnica</v-card-text>
         </v-card>
       </v-row>
-      
     </v-container>
 
     <v-container v-else class="d-flex ">
@@ -153,8 +158,6 @@
         <v-img class="ml-md-2" src="./puntacable-play-icon.svg"></v-img>
       </div>
     </v-container>
-
-    <generalFooter></generalFooter>
     
   </div>
 </template>
@@ -194,3 +197,10 @@ export default {
     }}
 }
 </script>
+<style scoped>
+.bg{
+    height: 400px;
+    background: url('~/static/help-banner-bg.svg') no-repeat center center !important;
+    background-size: cover;
+}
+</style>
