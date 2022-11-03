@@ -1,5 +1,5 @@
 <template>
-    <v-card flat height="400">
+    <v-card flat height="440" class="mb-xs-6">
         <v-toolbar color="primary" elevation="0" dense>
           <v-toolbar-title>
             <slot></slot>

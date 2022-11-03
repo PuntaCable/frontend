@@ -174,12 +174,12 @@
             <v-list-item-title>Contratá Puntacable</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item>
+        <v-list-item to="/" >
           <v-list-item-content>
             <v-list-item-title>Ver Ofertas</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item>
+        <v-list-item to="/">
           <v-list-item-content>
             <v-list-item-title>Ver Planes</v-list-item-title>
           </v-list-item-content>
@@ -214,7 +214,7 @@
             <v-list-item-title>Atención al cliente </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item>
+        <v-list-item to="/centroayuda">
           <v-list-item-content>
             <v-list-item-title>Centro de ayuda</v-list-item-title>
           </v-list-item-content>

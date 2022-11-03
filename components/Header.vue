@@ -37,17 +37,17 @@
       <v-app-bar-nav-icon @click="openDrawer =!openDrawer"></v-app-bar-nav-icon>
     </app-bar>
       <v-list>
-        <v-list-item>
+        <v-list-item to="/paquetes">
           <v-list-item-content>
             <v-list-item-title>Paquetes</v-list-item-title> 
           </v-list-item-content>
         </v-list-item>
-        <v-list-item>
+        <v-list-item to="/oficinaVirtual">
           <v-list-item-content>
             <v-list-item-title>Oficina virtual</v-list-item-title> 
           </v-list-item-content>
         </v-list-item>
-        <v-list-item>
+        <v-list-item to="/programacion">
           <v-list-item-content>
             <v-list-item-title>Programacion</v-list-item-title> 
           </v-list-item-content>
@@ -57,18 +57,17 @@
             <v-list-item-title>Sucursales</v-list-item-title> 
           </v-list-item-content>
         </v-list-item>
-        <v-list-item>
+        <v-list-item to="/hoteles">
           <v-list-item-content>
             <v-list-item-title>Hoteles</v-list-item-title> 
           </v-list-item-content>
         </v-list-item>
-        <v-list-item>
+        <v-list-item to="/deco">
           <v-list-item-content>
             <v-list-item-title>Activa tu Deco</v-list-item-title> 
           </v-list-item-content>
         </v-list-item>
       </v-list>
-
     </v-navigation-drawer>
 
 
