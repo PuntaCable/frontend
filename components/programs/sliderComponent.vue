@@ -19,7 +19,7 @@
     </div>
     <div v-else>
       <v-img class="top-program" height="50vh" width="auto" style="max-width:100%" cover
-        :src="(`http://34.238.35.65/images/epg/`+program.program.picture)">
+        :src="(`https://appets.com.uy/files/?picture=`+program.program.picture)">
         <div class="d-flex align-end justify-center">
         </div>
       </v-img>
