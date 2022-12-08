@@ -18,7 +18,7 @@
           <v-col v-for="(schedules,index) in schedulesList" :key="index">
             <v-card elevation="6" color="white" height="95px" width="100%" class="d-flex align-center white--text">
               <v-img contain height="95px" width="100%"
-                :src="`http://34.238.35.65/images/epg/`+schedules[0].channel.logo"></v-img>
+                :src="`https://appets.com.uy/files/?picture=`+schedules[0].channel.logo"></v-img>
             </v-card>
           </v-col>
 

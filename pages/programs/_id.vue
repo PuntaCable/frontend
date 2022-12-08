@@ -7,7 +7,7 @@
             <v-col class="col-md-3 col-12">
               <v-card-text>
                 <v-card>
-                  <v-img v-if="featured" cover :src="(`http://34.238.35.65/images/epg/`+featured.program.picture)">
+                  <v-img v-if="featured" cover :src="(`https://appets.com.uy/files/?picture=`+featured.program.picture)">
                   </v-img>
                 </v-card>
               </v-card-text>
