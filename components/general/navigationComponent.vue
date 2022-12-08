@@ -66,7 +66,7 @@
           </v-list-item-content>
         </v-list-item>
 
-        <v-list-item to="/deco">
+        <v-list-item to="/contacto">
           <v-list-item-avatar>
             <v-img src="/icons/envelope.png"></v-img>
           </v-list-item-avatar>
@@ -76,7 +76,7 @@
           </v-list-item-content>
         </v-list-item>
 
-        <v-list-item to="/deco">
+        <v-list-item>
 
           <v-list-item-content>
             <v-btn large outlined class="rounded-lg">
