@@ -30,7 +30,7 @@
         </template>
         <v-divider></v-divider>
       <v-list>
-        <v-list-item to="/paquetes">
+        <v-list-item to="/">
           <v-list-item-avatar>
             <v-img src="/icons/home.png"></v-img>
           </v-list-item-avatar>
@@ -40,7 +40,7 @@
           </v-list-item-content>
         </v-list-item>
 
-        <v-list-item to="/paquetes">
+        <v-list-item to="/#packages">
           <v-list-item-avatar>
             <v-img src="/icons/list.png"></v-img>
           </v-list-item-avatar>
@@ -86,7 +86,7 @@
             </v-btn>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item to="/deco">
+        <v-list-item href="https://app-2np.pages.dev/">
 
           <v-list-item-content>
             <v-btn large color="primary" class="rounded-lg">
