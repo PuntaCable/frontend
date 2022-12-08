@@ -1,206 +1,124 @@
 <template>
   <div>
-    <v-carousel height="auto">
-    <v-carousel-item
-      v-for="(item,i) in items"
-      :key="i"
-      :src="item.src"
-      reverse-transition="fade-transition"
-      transition="fade-transition"
-    ></v-carousel-item>
-  </v-carousel>
+    <v-carousel hide-delimiters continuous cycle>
+      <v-carousel-item v-for="(item,i) in items" :key="i" :src="item.src"></v-carousel-item>
+    </v-carousel>
 
-    <v-container class="d-flex flex-wrap">
-      <v-row class="justify-center">
-        <v-col class="col-md-4 ">
-          <Card>
-            Pack brava
-            <template v-slot:description>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-              <v-divider></v-divider>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-              <v-divider></v-divider>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-            </template>
-          </Card>
+    <v-container>
+      <v-row class="mt-n16">
+        <v-col class="col-12">
+          <channelsComponent></channelsComponent>
         </v-col>
-        <v-col class="col-md-4"> 
-          <Card>
-            Pack brava
-            <template v-slot:description>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-              <v-divider></v-divider>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-              <v-divider></v-divider>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-            </template>
-          </Card>
-        </v-col>
-        <v-col class="col-md-4"> 
-          <Card>
-            Pack brava
-            <template v-slot:description>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-              <v-divider></v-divider>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-              <v-divider></v-divider>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-            </template>
-          </Card>
-        </v-col> 
+      </v-row>
+      <div id="packages">
+        <packagesListComponent></packagesListComponent>
+      </div>
 
-        <v-col class="col-md-4">
-          <Card>
-            Pack brava
-            <template v-slot:description>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-              <v-divider></v-divider>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-              <v-divider></v-divider>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-            </template>
-          </Card>
-        </v-col>
-        <v-col class="col-md-4"> 
-          <Card>
-            Pack brava
-            <template v-slot:description>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-              <v-divider></v-divider>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-              <v-divider></v-divider>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-            </template>
-          </Card>
-        </v-col>
-        <v-col class="col-md-4"> 
-          <Card>
-            Pack brava
-            <template v-slot:description>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-              <v-divider></v-divider>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-              <v-divider></v-divider>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-            </template>
-          </Card>
-        </v-col> 
+      <v-row>
+        <v-col class="col-12">
+          <v-card flat color="transparent">
+            <v-card-text class="text-center text-h4">Disfrutalo en todos tus dispositivos</v-card-text>
+            <v-card-text>
+              <v-img src="https://puntacable.com.uy/assets/img/dispositivos-play.png"></v-img>
+            </v-card-text>
+            <v-card-actions class="justify-center">
+              <v-btn rounded color="primary" class="font-weight-regular black--text">ENTRAR AHORA</v-btn>
+            </v-card-actions>
+          </v-card>
 
-        <v-col class="col-md-4 col-12">
-          <Card>
-            Pack brava
-            <template v-slot:description>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-              <v-divider></v-divider>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-              <v-divider></v-divider>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-            </template>
-          </Card>
         </v-col>
       </v-row>
     </v-container>
-    
     <v-img src="https://puntacable.com.uy/assets/img/prepago-banner.svg"></v-img>
 
-    <v-card class="bg mb-md-12 pl-4">
-            <h1 class="text-xl">Centro de ayuda</h1>
-            <br>
-            <h2>¿En qué podemos ayudarte hoy?</h2>
-            <br>
-            <v-text-field outlined></v-text-field>
-        </v-card>
+    <v-container>
+      <v-row>
+        <v-col class="col-12 col-md-4">
+          <GeneralCardComponent flat to="/centroAyuda" class="transparent">
+            <v-card-title class="d-flex align-center justify-center">
+              <v-btn color="primary" x-large fab>
+                <v-icon>mdi-book-open</v-icon>
+              </v-btn>
+            </v-card-title>
 
-    <v-container v-if="isMobile == false" class="d-flex ">
-      <v-row class="justify-space-around ml-md-16 mr-md-16 text-center ">
-        <v-card to="/centroAyuda" elevation="0" class="flex-column pt-md-6">
-          <v-btn color="primary" x-large fab><v-icon>mdi-book-open</v-icon></v-btn>
-          <v-card-text>Instructivos y manuales</v-card-text>
-        </v-card>
-        
-        <v-card elevation="0" class="pt-md-6">
-          <v-btn color="primary"  x-large fab><v-icon>mdi-help</v-icon></v-btn>
-          <v-card-text>Preguntas frecuentes</v-card-text>
-        </v-card>
+            <v-card-subtitle class="text-center font-weight-regular">Instructivos y manuales</v-card-subtitle>
+          </GeneralCardComponent>
 
-        <v-card elevation="0" class="pt-md-6">
-          <v-btn color="primary"  x-large fab><v-icon>mdi-tools</v-icon></v-btn>
-          <v-card-text>Asistencia Técnica</v-card-text>
-        </v-card>
+        </v-col>
+        <v-col class="col-12 col-md-4" to="/centroAyuda">
+          <GeneralCardComponent flat elevation="0" class="transparent">
+            <v-card-title class="d-flex align-center justify-center">
+              <v-btn color="primary" x-large fab>
+                <v-icon>mdi-help</v-icon>
+              </v-btn>
+            </v-card-title>
+
+            <v-card-subtitle class="text-center font-weight-regular">Centro de ayuda</v-card-subtitle>
+          </GeneralCardComponent>
+
+        </v-col>
+        <v-col class="col-12  col-md-4" to="/centroAyuda">
+          <GeneralCardComponent outlined elevation="0" class="transparent">
+            <v-card-title class="d-flex align-center justify-center">
+              <v-btn color="primary" x-large fab>
+                <v-icon>mdi-tools</v-icon>
+              </v-btn>
+            </v-card-title>
+
+            <v-card-subtitle class="text-center font-weight-regular">Asistencia Técnica</v-card-subtitle>
+          </GeneralCardComponent>
+
+        </v-col>
+
       </v-row>
     </v-container>
 
-    <v-container v-else class="d-flex ">
-      <v-row class="justify-space-around ml-md-16 mr-md-16 text-center flex-column ">
-        <v-card elevation="0" class="flex-column pt-md-6 pt-6">
-          <v-btn color="primary" x-large fab><v-icon>mdi-book-open</v-icon></v-btn>
-          <v-card-text>Instructivos y manuales</v-card-text>
-        </v-card>
-        
-        <v-card elevation="0" class="pt-md-6 pt-6">
-          <v-btn color="primary"  x-large fab><v-icon>mdi-help</v-icon></v-btn>
-          <v-card-text>Preguntas frecuentes</v-card-text>
-        </v-card>
-
-        <v-card elevation="0" class="pt-md-6 pt-6">
-          <v-btn color="primary"  x-large fab><v-icon>mdi-tools</v-icon></v-btn>
-          <v-card-text>Asistencia Técnica</v-card-text>
-        </v-card>
-      </v-row>
-    </v-container>
-    
-
-
-    <v-container class="d-flex flex-column align-center">
-      <v-img src="https://puntacable.com.uy/assets/img/dispositivos-play.png"></v-img>
-      <div class="d-flex align-center flex-wrap">
-        <v-text class=" text-h3 text-center">Cambiate a la nueva forma de ver TV</v-text>
-        <v-img class="ml-md-2" src="./puntacable-play-icon.svg"></v-img>
-      </div>
-    </v-container>
-    
   </div>
 </template>
 
 <script>
   import generalFooter from "~/components/general/Footer.vue"
-export default {
+  export default {
     data() {
-        return {
-            items: [
-                {
-                    src: "./1.jpg",
-                },
-                {
-                    src: "./2.jpeg",
-                },
-                {
-                    src: "./3.jpeg",
-                },
-                {
-                    src: "./4.jpg",
-                },
-                {
-                    src: "./5.jpg",
-                },
-                {
-                    src: "./6.jpg",
-                },
-            ],
-        };
+      return {
+        items: [{
+            src: "./1.jpg",
+          },
+          {
+            src: "./2.jpeg",
+          },
+          {
+            src: "./3.jpeg",
+          },
+          {
+            src: "./4.jpg",
+          },
+          {
+            src: "./5.jpg",
+          },
+          {
+            src: "./6.jpg",
+          },
+        ],
+      };
     },
     name: "IndexPage",
-    components: {generalFooter},
+    components: {
+      generalFooter
+    },
     computed: {
-    isMobile() {
-      return this.$vuetify.breakpoint.smAndDown
-    }}
-}
+      isMobile() {
+        return this.$vuetify.breakpoint.smAndDown
+      }
+    }
+  }
+
 </script>
 <style scoped>
-.bg{
+  .bg {
     height: 400px;
     background: url('~/static/help-banner-bg.svg') no-repeat center center !important;
     background-size: cover;
-}
+  }
+
 </style>

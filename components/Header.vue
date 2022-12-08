@@ -18,10 +18,8 @@
     <v-app-bar v-if="isMobile == false">
       <v-toolbar-items class="d-flex justify-space-around fill-width">
         <v-btn to="/paquetes" text class="font-weight-light">Paquetes</v-btn>
-        <v-btn to="/oficina" text class="font-weight-light">Oficina Virtual</v-btn>
         <v-btn to="/programacion" text class="font-weight-light">Programación</v-btn>
         <v-btn to="/contacto" text class="font-weight-light">Sucursales</v-btn>
-        <v-btn to="/hoteles" text class="font-weight-light">Hoteles</v-btn>
         <v-btn to="/deco" text class="font-weight-light">Activa tu Deco</v-btn>
       </v-toolbar-items>
     </v-app-bar>

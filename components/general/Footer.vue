@@ -1,16 +1,20 @@
 <template>
-  <v-card class="">
+  <v-card color="background-gradient" style="border-top:4px solid orange">
     <v-card-title class="d-flex justify-center">
-        <img contain height="80" src="~/static/light-logo.svg">
+      <img contain height="80" src="~/static/light-logo.svg">
     </v-card-title>
+    <v-card-subtitle class="d-flex justify-center py-3">
+      <v-btn to="/contacto" outlined height="50" width="200" color="primary">Contactanos</v-btn>
+    </v-card-subtitle>
+    <v-card-subtitle class="text-center">
+      <h2 class="text-h5">Seguinos en las redes</h2>
+    </v-card-subtitle>
     <v-card-subtitle>
-      <v-row v-if="isMobile == false" class="justify-space-around text-center mt-md-12">
+      <v-row>
         <v-col class="flex-column d-flex align-center">
-          <v-btn to="/contacto" outlined height="50" width="200" color="primary">Contactanos</v-btn>
-          <v-text class="mt-md-12 mb-md-5 text-h5">Seguinos en las redes</v-text>
           <v-row class="justify-space-around">
             <a href="https://www.facebook.com/puntacablemaldonado">
-              <v-img contain height="40" width="40"  src="/facebook-logo-3-1.png"></v-img>
+              <v-img contain height="40" width="40" src="/facebook-logo-3-1.png"></v-img>
             </a>
             <a href="https://www.youtube.com/channel/UCev-0rKQjFKeNNcygkhDjpA">
               <v-img class="ml-md-2" contain height="40" width="40" src="/youtube.svg"></v-img>
@@ -24,259 +28,54 @@
           </v-row>
         </v-col>
       </v-row>
-      
-      <v-row v-else class="justify-space-around text-center mt-md-12">
-        <v-col class="flex-column d-flex align-center mt-4">
-          <v-btn to="/contacto" outlined height="50" width="200" color="primary">Contactanos</v-btn>
-          <v-text class="mt-6 text-h5">Seguinos en las redes</v-text>
-          <v-row class="justify-space-around mt-6">
-            <v-img contain height="40" width="40" src="/facebook-logo-3-1.png"></v-img>
-            <v-img class="ml-md-2" contain height="40" width="40" src="/youtube.svg"></v-img>
-            <v-img class="ml-md-2" contain height="40" width="40" src="/ig.png"></v-img>
-            <v-img class="ml-md-2" contain height="40" width="40" src="/twitter.svg"></v-img>
-          </v-row>
-        </v-col>
-      </v-row>
     </v-card-subtitle>
-    <v-card-text>
-      <v-row >
-        <v-col class="col-12 col-md-6">
-          <v-list>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon>mdi-map-marker</v-icon>
-              </v-list-item-icon>
-              <v-list-item-content>
-                <v-list-item-title>Punta del Este: San Francisco y Lunas de Oro</v-list-item-title>
+    <v-card-text class="d-flex justify-center">
+      <v-list dense color="transparent">
+          <v-list-item>
+            <v-list-item-avatar>
+              <v-img src="/icons/call.png"></v-img>
+            </v-list-item-avatar>
+            <v-list-item-content>
+              <v-list-item-title class="font-weight-regular text-subtitle-1 mb-2">Llamanos</v-list-item-title>
+              <v-divider></v-divider>
+              <v-list-item-subtitle class="body-2 font-weight-regular white--text">
+                WhatsApp +598 2904 9235
+              </v-list-item-subtitle>
 
-              </v-list-item-content>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon>mdi-map-marker</v-icon>
-              </v-list-item-icon>
-              <v-list-item-content>
-                <v-list-item-title>Maldoando: Rincón 615 casi 3 de Febrero</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item class="my-6">
+            <v-list-item-avatar>
+              <v-img src="/icons/pin.png"></v-img>
+            </v-list-item-avatar>
+            <v-list-item-content>
+              <v-list-item-title class="font-weight-regular text-subtitle-1 mb-2">Visitanos</v-list-item-title>
+              <v-divider></v-divider>
+              <v-list-item-subtitle class="body-2 font-weight-regular white--text">
+                <b>Punta del Este: </b> San Francisco y Lunas de Oro <br> Lunes a viernes
+                10 a 18 hs Sábados 10 a 14 hs <br> Domingo cerrado
+              </v-list-item-subtitle>
+              <v-list-item-subtitle class="body-2 font-weight-regular white--text mt-2">
+                <b>Maldonado: </b>Rincón 615 casi 3 de Febrero <br> Lunes a Viernes
+                de 9 a
+                13 hs y de 14 a 18 hs. <br> Sábado de 9 a 13 hs. Domingo cerrado
 
-              </v-list-item-content>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon>mdi-phone</v-icon>
-              </v-list-item-icon>
-              <v-list-item-content>
-                <v-list-item-title>Punta del Este: San Francisco y Lunas de Oro</v-list-item-title>
+              </v-list-item-subtitle>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-avatar>
+              <v-img src="/icons/envelope.png"></v-img>
+            </v-list-item-avatar>
+            <v-list-item-content>
+              <v-list-item-title class="font-weight-regular text-subtitle-1 mb-2">Escribenos</v-list-item-title>
+              <v-divider></v-divider>
+              <v-list-item-subtitle class="body-2 font-weight-regular white--text">comercial@puntacable.com</v-list-item-subtitle>
 
-              </v-list-item-content>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon>mdi-whatsapp</v-icon>
-              </v-list-item-icon>
-              <v-list-item-content>
-                <v-list-item-title>Punta del Este: San Francisco y Lunas de Oro</v-list-item-title>
-                
-              </v-list-item-content>
-            </v-list-item>
-          </v-list>
-        </v-col>
-        
-        <v-row no-gutters>
-          <v-col class="col-12 col-md-6">
-            <v-list>
-              <v-list-item to="/packs/PM">
-                <v-list-item-icon>
-                  <v-icon size="20">mdi-circle</v-icon>
-                </v-list-item-icon>
-                <v-list-item-content>
-                  <v-list-item-title>Pack MANSA</v-list-item-title>
-                </v-list-item-content>
-              </v-list-item> 
-              <v-list-item to="/packs/PB">
-                <v-list-item-icon>
-                  <v-icon size="20">mdi-circle</v-icon>
-                </v-list-item-icon>
-                <v-list-item-content>
-                  <v-list-item-title>Pack BRAVA</v-list-item-title>
-                </v-list-item-content>
-              </v-list-item>
-              <v-list-item to="/packs/PLB">
-                <v-list-item-icon>
-                  <v-icon size="20">mdi-circle</v-icon>
-                </v-list-item-icon>
-                <v-list-item-content>
-                  <v-list-item-title>Pack LA BARRA</v-list-item-title>
-                </v-list-item-content>
-              </v-list-item>
-              <v-list-item to="/packs/JI">
-                <v-list-item-icon>
-                  <v-icon size="20">mdi-circle</v-icon>
-                </v-list-item-icon>
-                <v-list-item-content>
-                  <v-list-item-title>Pack JOSÉ IGNACIO</v-list-item-title>
-                </v-list-item-content>
-              </v-list-item>
-              <v-list-item to="/packs/HBO">
-                <v-list-item-icon>
-                  <v-icon size="20">mdi-circle</v-icon>
-                </v-list-item-icon>
-                <v-list-item-content>
-                  <v-list-item-title>Pack HBO Premium</v-list-item-title>
-                </v-list-item-content>
-              </v-list-item>
-            </v-list>
-          </v-col>
-  
-          <v-col class="col-12 col-md-6">
-            <v-list>
-              <v-list-item to="/packs/PP">
-                <v-list-item-icon >
-                  <v-icon size="20">mdi-circle</v-icon>
-                </v-list-item-icon>
-                <v-list-item-content>
-                  <v-list-item-title>Prepago</v-list-item-title>
-                </v-list-item-content>
-              </v-list-item>
-              <v-list-item to="/packs/adultos">
-                <v-list-item-icon >
-                  <v-icon size="20">mdi-circle</v-icon>
-                </v-list-item-icon>
-                <v-list-item-content>
-                  <v-list-item-title>Pack Adultos</v-list-item-title>
-                </v-list-item-content>
-              </v-list-item>
-              <v-list-item to="/packs/VTV PLUS">
-                <v-list-item-icon >
-                  <v-icon size="20">mdi-circle</v-icon>
-                </v-list-item-icon>
-                <v-list-item-content>
-                  <v-list-item-title>Nuevo Pack VTV PLUS</v-list-item-title>
-                </v-list-item-content>
-              </v-list-item>
-              <v-list-item to="/packs/U PLUS">
-                <v-list-item-icon >
-                  <v-icon size="20">mdi-circle</v-icon>
-                </v-list-item-icon>
-                <v-list-item-content>
-                  <v-list-item-title>Universal Plus</v-list-item-title>
-                </v-list-item-content>
-              </v-list-item>
-              
-            </v-list>
-          </v-col>
-        </v-row>
+            </v-list-item-content>
+          </v-list-item>
 
-        
-        <v-col class="col-md-3">
-      <v-list dense>
-        <v-list-item>
-          <v-list-item-content>
-            <v-list-item-title>Contratá Puntacable</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item to="/" >
-          <v-list-item-content>
-            <v-list-item-title>Ver Ofertas</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item to="/">
-          <v-list-item-content>
-            <v-list-item-title>Ver Planes</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-        </v-col>
-
-        <v-col class="col-md-3">
-          <v-list dense>
-            <v-list-item>
-          <v-list-item-content>
-            <v-list-item-title>Programación</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item>
-          <v-list-item-content>
-            <v-list-item-title>Grilla</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item>
-          <v-list-item-content>
-            <v-list-item-title>Buscador de Programación</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-          </v-list>
-        </v-col>
-
-        <v-col class="col-md-3">
-          <v-list dense>
-            <v-list-item>
-          <v-list-item-content>
-            <v-list-item-title>Atención al cliente </v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item to="/centroayuda">
-          <v-list-item-content>
-            <v-list-item-title>Centro de ayuda</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item>
-          <v-list-item-content>
-            <v-list-item-title>Asistencia Técnica</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item>
-          <v-list-item-content>
-            <v-list-item-title>Cómo contrato Puntacable</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item>
-          <v-list-item-content>
-            <v-list-item-title>Cortes zonales</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item to="/contacto">
-          <v-list-item-content>
-            <v-list-item-title >Contactanos</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-          </v-list>
-        </v-col>
-
-        <v-col class="col-md-3">
-          <v-list dense>
-            <v-list-item>
-          <v-list-item-content>
-            <v-list-item-title>Mi Puntacable</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item>
-          <v-list-item-content>
-            <v-list-item-title>Ingresar</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item>
-          <v-list-item-content>
-            <v-list-item-title>Panel</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item>
-          <v-list-item-content>
-            <v-list-item-title>Facturación</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item>
-          <v-list-item-content>
-            <v-list-item-title>Mis Productos</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item>
-          <v-list-item-content>
-            <v-list-item-title>Mi Perfil</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-          </v-list>
-        </v-col>
-      </v-row>
+        </v-list>
     </v-card-text>
 
     <v-footer color="primary">
@@ -288,11 +87,12 @@
 </template>
 
 <script>
-  export default{
+  export default {
     computed: {
-    isMobile() {
-      return this.$vuetify.breakpoint.smAndDown
+      isMobile() {
+        return this.$vuetify.breakpoint.smAndDown
+      }
     }
   }
-  }
+
 </script>
