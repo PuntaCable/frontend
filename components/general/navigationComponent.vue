@@ -1,22 +1,37 @@
 <template>
   <div>
 
-    <v-app-bar color="background-gradient">
-      <template v-if="isMobile">
-        <v-app-bar-nav-icon class="" @click="openDrawer =!openDrawer"></v-app-bar-nav-icon>
-        <v-spacer></v-spacer>
+    <v-app-bar color="grey darken-4" height="100" elevation="0">
+      <v-toolbar-title v-if="!isMobile">
         <router-link to="/">
-          <img contain src="~/static/orange-logo.png" alt="" height="40">
+          <img src="/orange-logo.png" alt="" width="120">
         </router-link>
-      </template>
-      <template v-else>
-        <v-toolbar-items class="d-flex justify-space-around fill-width">
-          <v-btn to="/" text class="font-weight-regular">Inicio</v-btn>
-          <v-btn to="/#packages" text >Paquetes</v-btn>
-          <v-btn to="/schedules" text >Programación</v-btn>
-          <v-btn to="/centroAyuda" text >Preguntas frecuentes</v-btn>
-          <v-btn to="/contacto" text>Contacto</v-btn>
-        </v-toolbar-items>
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-toolbar-items class="align-center">
+        <v-img contain src="/play-btn.svg" alt="" width="120" height="50" class="" />
+        <v-img contain src="/+television.png" alt="" width="90" height="32" class="rounded-xl " />
+        <v-img contain src="/turnos-btn.svg" alt="" width="120" height="35" class="rounded-pill" />
+      </v-toolbar-items>
+      <template v-slot:extension>
+        <template v-if="isMobile">
+          <v-app-bar-nav-icon class="" @click="openDrawer =!openDrawer"></v-app-bar-nav-icon>
+          <v-spacer></v-spacer>
+          <router-link to="/">
+            <img contain src="~/static/orange-logo.png" alt="" height="40">
+          </router-link>
+        </template>
+        <template v-else>
+          <v-spacer></v-spacer>
+          <v-toolbar-items>
+            <v-btn to="/" text class="font-weight-regular">Inicio</v-btn>
+            <v-btn to="/#packages" text>Paquetes</v-btn>
+            <v-btn to="/schedules" text>Programación</v-btn>
+            <v-btn to="/centroAyuda" text>Preguntas frecuentes</v-btn>
+            <v-btn to="/contacto" text>Contacto</v-btn>
+          </v-toolbar-items>
+
+        </template>
 
       </template>
     </v-app-bar>
@@ -27,8 +42,8 @@
         <v-toolbar flat color="background-gradient">
           <v-app-bar-nav-icon @click="openDrawer =!openDrawer"></v-app-bar-nav-icon>
         </v-toolbar>
-        </template>
-        <v-divider></v-divider>
+      </template>
+      <v-divider></v-divider>
       <v-list>
         <v-list-item to="/">
           <v-list-item-avatar>

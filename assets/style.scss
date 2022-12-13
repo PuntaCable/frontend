@@ -15,9 +15,8 @@ body {
 
   .v-application {
 
-    background: linear-gradient(to right, #232526, #414345)!important;
     .background-gradient{
-        background: linear-gradient(to right, #374c5e, #364c62) !important
+        background: #202020 !important
     }
     input{
       font-family: $main-font!important;
@@ -82,6 +81,15 @@ body {
     }
   
   
+    //borders
+
+
+    .border-color-top{
+      border-top:4px solid #ff8212
+    }
+    .border-color-bottom{
+      border-bottom:4px solid #ff8212
+    }
 
     //Text
     h1,

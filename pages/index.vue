@@ -1,11 +1,9 @@
 <template>
   <div>
-    <v-carousel hide-delimiters continuous cycle>
-      <v-carousel-item v-for="(item,i) in items" :key="i" :src="item.src"></v-carousel-item>
-    </v-carousel>
-
+    <generalSliderComponent></generalSliderComponent>
     <v-container>
-      <v-row class="mt-n16">
+
+      <v-row class="mt-16">
         <v-col class="col-12">
           <channelsComponent></channelsComponent>
         </v-col>
@@ -29,79 +27,29 @@
         </v-col>
       </v-row>
     </v-container>
-    <v-img src="https://puntacable.com.uy/assets/img/prepago-banner.svg"></v-img>
-
-    <v-container>
-      <v-row>
-        <v-col class="col-12 col-md-4">
-          <GeneralCardComponent flat to="/centroAyuda" class="transparent">
-            <v-card-title class="d-flex align-center justify-center">
-              <v-btn color="primary" x-large fab>
-                <v-icon>mdi-book-open</v-icon>
-              </v-btn>
-            </v-card-title>
-
-            <v-card-subtitle class="text-center font-weight-regular">Instructivos y manuales</v-card-subtitle>
-          </GeneralCardComponent>
-
-        </v-col>
-        <v-col class="col-12 col-md-4" to="/centroAyuda">
-          <GeneralCardComponent flat elevation="0" class="transparent">
-            <v-card-title class="d-flex align-center justify-center">
-              <v-btn color="primary" x-large fab>
-                <v-icon>mdi-help</v-icon>
-              </v-btn>
-            </v-card-title>
-
-            <v-card-subtitle class="text-center font-weight-regular">Centro de ayuda</v-card-subtitle>
-          </GeneralCardComponent>
-
-        </v-col>
-        <v-col class="col-12  col-md-4" to="/centroAyuda">
-          <GeneralCardComponent outlined elevation="0" class="transparent">
-            <v-card-title class="d-flex align-center justify-center">
-              <v-btn color="primary" x-large fab>
-                <v-icon>mdi-tools</v-icon>
-              </v-btn>
-            </v-card-title>
-
-            <v-card-subtitle class="text-center font-weight-regular">Asistencia Técnica</v-card-subtitle>
-          </GeneralCardComponent>
-
-        </v-col>
-
-      </v-row>
-    </v-container>
-
+    <v-card class="border-color-top">
+      <v-img src="/prepago/background.png">
+        <div class="fill-width fill-height d-inline-flex justify-end align-center">
+          <v-row>
+            <v-col class="col-12 col-md-7"></v-col>
+            <v-col class="col-12 col-md-5 d-flex align-center flex-column">
+              <img src="/prepago/title.gif" width="100%">
+              <div>
+                <v-btn class="mt- font-weight-bold" rounded x-large color="primary">
+                  CONTRATA tu servicio prepago AHORA
+                </v-btn>
+              </div>
+            </v-col>
+          </v-row>
+        </div>
+      </v-img>
+    </v-card>
   </div>
 </template>
 
 <script>
   import generalFooter from "~/components/general/Footer.vue"
   export default {
-    data() {
-      return {
-        items: [{
-            src: "./1.jpg",
-          },
-          {
-            src: "./2.jpeg",
-          },
-          {
-            src: "./3.jpeg",
-          },
-          {
-            src: "./4.jpg",
-          },
-          {
-            src: "./5.jpg",
-          },
-          {
-            src: "./6.jpg",
-          },
-        ],
-      };
-    },
     name: "IndexPage",
     components: {
       generalFooter
