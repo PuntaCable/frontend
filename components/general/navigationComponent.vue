@@ -1,7 +1,19 @@
 <template>
   <div>
-
-    <v-app-bar color="grey darken-4" height="100" elevation="0">
+    <v-app-bar v-show="!isMobile" fixed color="#00000012" height="100" elevation="0">
+      <v-toolbar-title>
+        <router-link to="/">
+          <img src="/orange-logo.png" alt="" width="120">
+        </router-link>
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-toolbar-items class="align-center">
+        <v-img contain src="/play-btn.svg" alt="" width="120" height="50" class="" />
+        <v-img contain src="/+television.png" alt="" width="90" height="32" class="rounded-xl " />
+        <v-img contain src="/turnos-btn.svg" alt="" width="120" height="35" class="rounded-pill" />
+      </v-toolbar-items>
+    </v-app-bar>
+    <v-app-bar v-show="isMobile || scrollY>300" @scroll.native="checkScroll($e)" :fixed="!isMobile" color="grey darken-4" height="100" elevation="0">
       <v-toolbar-title v-if="!isMobile">
         <router-link to="/">
           <img src="/orange-logo.png" alt="" width="120">
@@ -124,13 +136,22 @@
   export default {
     data() {
       return {
-        openDrawer: false
+        openDrawer: false,
+        scrollY:0
+      }
+    },
+    mounted(){
+      window.addEventListener("scroll", this.checkScroll)
+    },
+    methods:{
+      checkScroll(e){
+        this.scrollY = window.top.scrollY
       }
     },
     computed: {
       isMobile() {
         return this.$vuetify.breakpoint.smAndDown
-      }
+      },
     }
   }
 

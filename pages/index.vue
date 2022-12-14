@@ -14,29 +14,36 @@
 
       <v-row>
         <v-col class="col-12">
-          <v-card flat color="transparent">
-            <v-card-text class="text-center text-h4">Disfrutalo en todos tus dispositivos</v-card-text>
+          <GeneralCardComponent color="background-gradient" flat>
+            <GeneralCardTitleComponent>
+              <span>DISFRUTALO</span>&nbsp;EN TODOS TUS&nbsp;<SPAN CLASS="primary--text">DISPOSITIVOS!</SPAN>
+            </GeneralCardTitleComponent>
+            <v-divider class="primary"></v-divider>
             <v-card-text>
               <v-img src="https://puntacable.com.uy/assets/img/dispositivos-play.png"></v-img>
             </v-card-text>
+            <v-divider></v-divider>
             <v-card-actions class="justify-center">
-              <v-btn rounded color="primary" class="font-weight-regular black--text">ENTRAR AHORA</v-btn>
+              <v-col class="col-md-6 col-12">
+                <v-btn rounded block large outlined color="white"
+                  class="font-weight-regular black--text text-subtitle-1 font-weight-bold">ENTRAR AHORA</v-btn>
+              </v-col>
             </v-card-actions>
-          </v-card>
 
+          </GeneralCardComponent>
         </v-col>
       </v-row>
     </v-container>
     <v-card class="border-color-top">
       <v-img src="/prepago/background.png">
-        <div class="fill-width fill-height d-inline-flex justify-end align-center">
+        <div class="fill-width fill-height d-inline-flex justify-end align-center py-4">
           <v-row>
             <v-col class="col-12 col-md-7"></v-col>
             <v-col class="col-12 col-md-5 d-flex align-center flex-column">
               <img src="/prepago/title.gif" width="100%">
               <div>
                 <v-btn class="mt- font-weight-bold" rounded x-large color="primary">
-                  CONTRATA tu servicio prepago AHORA
+                  CONTRATA tu prepago AHORA
                 </v-btn>
               </div>
             </v-col>

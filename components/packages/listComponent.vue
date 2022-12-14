@@ -2,6 +2,13 @@
   <div>
 
     <v-row class="justify-center">
+      <v-col class="col-12">
+        <GeneralCardComponent color="background-gradient" flat>
+          <GeneralCardTitleComponent>
+            ELEGI&nbsp;<span class="primary--text">PAQUETE</span>&nbsp;QUE MAS ENCAJE&nbsp;<span class="primary--text">CON VOS!</span>
+          </GeneralCardTitleComponent>
+</GeneralCardComponent>
+      </v-col>
       <v-col class="col-md-4  col-12" v-for="pk in packageList.data" :key="pk.id">
         <GeneralCardComponent color="background-gradient">
           <GeneralCardTitleComponent class="d-flex justify-center">

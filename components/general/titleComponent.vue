@@ -1,9 +1,7 @@
 <template>
   <typewriter ref="typewriter">
     <div class="text-md-h2 text-h4 font-weight-bold title">
-      <span class="primary--text">SEGUI LAS CARRERAS</span>
-      <br>
-      EN VIVO
+      <slot></slot>
     </div>
   </typewriter>
 </template>

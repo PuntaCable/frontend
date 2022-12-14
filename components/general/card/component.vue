@@ -1,5 +1,5 @@
 <template>
-  <v-card class="card" v-bind="$attrs" :class="{'fill-height':fillHeight}">
+  <v-card class="card rounded-sm" v-bind="$attrs" :class="{'fill-height':fillHeight}">
       <slot></slot>
   </v-card>
 </template>
