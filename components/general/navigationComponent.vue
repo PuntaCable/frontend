@@ -37,7 +37,7 @@
         </router-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-toolbar-items class="align-center">
+      <v-toolbar-items class="align-center" v-show="!isMobile" >
         <div class="mx-2">
           <v-btn  color="white" class="font-weight-bold text-h6 rounded-lg primary--text">
             <span class="font-weight-bold primary--text text-capitalize">PuntaCable</span>
