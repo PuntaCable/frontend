@@ -7,7 +7,7 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="align-center">
-          <v-img contain src="/play-btn.svg" alt="" width="120" height="50" class=""/>
+        <v-btn>PuntaCable Play</v-btn>
           <v-img contain src="/+television.png" alt="" width="90" height="32" class="rounded-xl "/>
           <v-img contain src="/turnos-btn.svg" alt="" width="120" height="35" class="rounded-pill"/>
       </v-toolbar-items>

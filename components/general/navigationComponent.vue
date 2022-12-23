@@ -8,12 +8,29 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="align-center">
-        <v-img contain src="/play-btn.svg" alt="" width="120" height="50" class="" />
-        <v-img contain src="/+television.png" alt="" width="90" height="32" class="rounded-xl " />
-        <v-img contain src="/turnos-btn.svg" alt="" width="120" height="35" class="rounded-pill" />
+        <div class="mx-2">
+          <v-btn outlined color="white" class="font-weight-bold text-h6 rounded-lg">
+            <span class="font-weight-bold primary--text text-capitalize">PuntaCable</span>
+            <img src="/icons/play.png" alt="" width="30"> </v-btn>
+
+        </div>
+        <div>
+          <v-btn outlined color="white" rounded class="font-weight-bold text-h6  rounded-lg">
+            <img src="/icons/plus.png" alt="" width="30">
+            <span class="primary--text">television</span>
+          </v-btn>
+        </div>
+        <div>
+          <v-btn outlined color="white" rounded class="font-weight-bold text-h6 rounded-lg">
+            <img src="/icons/calendar.png" alt="" width="30">
+            <span class="font-weight-bold primary--text text-capitalize">Turnos</span>
+            <span class="font-weight-bold blue--text text-capitalize">Online</span>
+          </v-btn>
+        </div>
       </v-toolbar-items>
     </v-app-bar>
-    <v-app-bar v-show="isMobile || scrollY>300" @scroll.native="checkScroll($e)" :fixed="!isMobile" color="grey darken-4" height="100" elevation="0">
+    <v-app-bar v-show="isMobile || scrollY>300" @scroll.native="checkScroll($e)" :fixed="!isMobile"
+      color="grey darken-4" height="100" elevation="0">
       <v-toolbar-title v-if="!isMobile">
         <router-link to="/">
           <img src="/orange-logo.png" alt="" width="120">
@@ -21,9 +38,25 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="align-center">
-        <v-img contain src="/play-btn.svg" alt="" width="120" height="50" class="" />
-        <v-img contain src="/+television.png" alt="" width="90" height="32" class="rounded-xl " />
-        <v-img contain src="/turnos-btn.svg" alt="" width="120" height="35" class="rounded-pill" />
+        <div class="mx-2">
+          <v-btn  color="white" class="font-weight-bold text-h6 rounded-lg primary--text">
+            <span class="font-weight-bold primary--text text-capitalize">PuntaCable</span>
+            <img src="/icons/play.png" alt="" width="30"> </v-btn>
+
+        </div>
+        <div>
+          <v-btn   color="white" rounded class="font-weight-bold text-h6 primary--text rounded-lg">
+            <img src="/icons/plus.png" alt="" width="30">
+            television
+          </v-btn>
+        </div>
+        <div>
+          <v-btn  color="white" rounded class="font-weight-bold text-h6 rounded-lg primary--text">
+            <img src="/icons/calendar.png" alt="" width="30">
+            <span class="font-weight-bold primary--text text-capitalize">Turnos</span>
+            <span class="font-weight-bold blue--text text-capitalize">Online</span>
+          </v-btn>
+        </div>
       </v-toolbar-items>
       <template v-slot:extension>
         <template v-if="isMobile">
@@ -137,14 +170,14 @@
     data() {
       return {
         openDrawer: false,
-        scrollY:0
+        scrollY: 0
       }
     },
-    mounted(){
+    mounted() {
       window.addEventListener("scroll", this.checkScroll)
     },
-    methods:{
-      checkScroll(e){
+    methods: {
+      checkScroll(e) {
         this.scrollY = window.top.scrollY
       }
     },

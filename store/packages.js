@@ -1,5 +1,7 @@
 export const state = () => ({
-  package: {},
+  package: {
+      channels:[]
+  },
   packagesList: {},
 })
 
@@ -15,13 +17,13 @@ export const getters = {
 
 export const actions = {
   find(context, id) {
-    return this.$axios.get(`/packages/${id}`)
+    return this.$axios.get(`/packages/${id}/?populate=*`)
       .then(response => {
         context.commit('set', response.data)
       })
   },
   findAll(context) {
-    return this.$axios.get(`/packages/?populate=*`)
+    return this.$axios.get(`/packages/?populate=*&sort[0]=id:asc`)
       .then(response => {
         context.commit('setList', response.data)
       })
