@@ -12,7 +12,7 @@
       </v-col>
       <v-col class="col-md-4  col-12" v-for="pk in packageList.data" :key="pk.id">
         <GeneralCardComponent color="background-gradient" class="d-flex justify-space-between flex-column"
-          min-height="405">
+          min-height="440">
           <div>
             <GeneralCardTitleComponent class="d-flex justify-center">
               <v-chip color="success" v-if="pk.featured" label small
@@ -88,7 +88,7 @@
             </v-card-actions>
           </GeneralCardComponent>
         </v-col>
-        <v-col class="col-12 col-md-6">
+        <v-col class="col-12 col-md-12">
           <v-btn block outlined rounded>VER TODOS LOS PLANES</v-btn>
         </v-col>
       </v-row>
