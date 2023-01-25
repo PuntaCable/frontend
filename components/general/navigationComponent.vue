@@ -3,17 +3,11 @@
     <v-app-bar v-show="!isMobile" fixed color="#00000012" height="100" elevation="0">
       <v-toolbar-title>
         <router-link to="/">
-          <img src="/orange-logo.png" alt="" width="120">
+          <img src="/logo.png" alt="" width="120">
         </router-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="align-center">
-        <div class="mx-2">
-          <v-btn outlined color="white" class="font-weight-bold text-h6 rounded-lg">
-            <span class="font-weight-bold primary--text text-capitalize">PuntaCable</span>
-            <img src="/icons/play.png" alt="" width="30"> </v-btn>
-
-        </div>
         <div>
           <v-btn outlined color="white" rounded class="font-weight-bold text-h6  rounded-lg">
             <img src="/icons/plus.png" alt="" width="30">
@@ -33,25 +27,19 @@
       color="grey darken-4" height="100" elevation="0">
       <v-toolbar-title v-if="!isMobile">
         <router-link to="/">
-          <img src="/orange-logo.png" alt="" width="120">
+          <img src="/logo.png" alt="" width="120">
         </router-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="align-center" v-show="!isMobile" >
-        <div class="mx-2">
-          <v-btn  color="white" class="font-weight-bold text-h6 rounded-lg primary--text">
-            <span class="font-weight-bold primary--text text-capitalize">PuntaCable</span>
-            <img src="/icons/play.png" alt="" width="30"> </v-btn>
-
-        </div>
         <div>
-          <v-btn   color="white" rounded class="font-weight-bold text-h6 primary--text rounded-lg">
+          <v-btn outlined color="white" rounded class="font-weight-bold text-h6  rounded-lg">
             <img src="/icons/plus.png" alt="" width="30">
-            television
+            <span class="primary--text">television</span>
           </v-btn>
         </div>
         <div>
-          <v-btn  color="white" rounded class="font-weight-bold text-h6 rounded-lg primary--text">
+          <v-btn outlined color="white" rounded class="font-weight-bold text-h6 rounded-lg">
             <img src="/icons/calendar.png" alt="" width="30">
             <span class="font-weight-bold primary--text text-capitalize">Turnos</span>
             <span class="font-weight-bold blue--text text-capitalize">Online</span>
@@ -73,11 +61,13 @@
             <v-btn to="/#packages" text>Paquetes</v-btn>
             <v-btn to="/schedules" text>Programación</v-btn>
             <v-btn to="/centroAyuda" text>Preguntas frecuentes</v-btn>
+            <v-btn href="https://play.puntacable.com.uy/uplay/servlet/uplayonlogin" text>Hoteles</v-btn>
             <v-btn to="/contacto" text>Contacto</v-btn>
+            <div class="mt-1">
+              <v-btn color="primary" @click="decoModal = true">ACTIVA TU DECO</v-btn>
+            </div>
           </v-toolbar-items>
-
         </template>
-
       </template>
     </v-app-bar>
 
@@ -139,7 +129,7 @@
         <v-list-item>
 
           <v-list-item-content>
-            <v-btn large outlined class="rounded-lg">
+            <v-btn large outlined class="rounded-lg" @click="decoModal = true">
               <img width="40" src="/icons/stack.png">
               &nbsp;&nbsp;
               <span>Activa tu Deco</span>
@@ -161,7 +151,7 @@
       </v-list>
     </v-navigation-drawer>
 
-
+    <decoActivationComponent v-model="decoModal"></decoActivationComponent>
   </div>
 </template>
 
@@ -170,7 +160,8 @@
     data() {
       return {
         openDrawer: false,
-        scrollY: 0
+        scrollY: 0,
+        decoModal: false
       }
     },
     mounted() {

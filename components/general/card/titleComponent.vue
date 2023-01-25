@@ -12,6 +12,6 @@
 
 <style scoped>
 .card-title{
-      border-top: 5px solid #ff8503!important;
+      border-top: 5px solid #149199!important;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container class="mt-16 pt-12">
     <v-row>
       <v-col class="col-12 col-md-7">
 
@@ -7,7 +7,7 @@
           <GeneralCardTitleComponent>
             Informacion de contacto
           </GeneralCardTitleComponent>
-          <v-divider class="primary"></v-divider>
+          <v-divider class="cyan darken-1"></v-divider>
           <v-card-text>
             <v-list dense color="transparent">
           <v-list-item>

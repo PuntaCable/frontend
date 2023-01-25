@@ -18,7 +18,7 @@
             <GeneralCardTitleComponent>
               <span>DISFRUTALO</span>&nbsp;EN TODOS TUS&nbsp;<SPAN CLASS="primary--text">DISPOSITIVOS!</SPAN>
             </GeneralCardTitleComponent>
-            <v-divider class="primary"></v-divider>
+            <v-divider class="cyan darken-1"></v-divider>
             <v-card-text>
               <v-img src="https://puntacable.com.uy/assets/img/dispositivos-play.png"></v-img>
             </v-card-text>
@@ -40,7 +40,11 @@
           <v-row>
             <v-col class="col-12 col-md-7"></v-col>
             <v-col class="col-12 col-md-5 d-flex align-center flex-column">
-              <img src="/prepago/title.gif" width="100%">
+              <generalTitleComponent>
+              <span class="primary--text">LA NUEVA FORMA</span>
+                <br>
+                DE VER TV
+        </generalTitleComponent>
               <div>
                 <v-btn class="mt- font-weight-bold" rounded x-large color="primary">
                   CONTRATA tu prepago AHORA

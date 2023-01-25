@@ -3,7 +3,7 @@
     <GeneralCardTitleComponent  class="white--text">
       <slot name="header"></slot>
     </GeneralCardTitleComponent>
-    <v-divider class="primary"></v-divider>
+    <v-divider class="cyan darken-1"></v-divider>
     <v-card-text>
       <v-row>
         <v-col class="col-12">

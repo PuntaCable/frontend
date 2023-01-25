@@ -1,10 +1,10 @@
 <template>
-  <v-card color="background-gradient" style="border-top:4px solid orange">
+  <v-card color="background-gradient" style="border-top:4px solid #00ACC1">
     <v-card-title class="d-flex justify-center">
       <img contain height="80" src="~/static/light-logo.svg">
     </v-card-title>
     <v-card-subtitle class="d-flex justify-center py-3">
-      <v-btn to="/contacto" outlined height="50" width="200" color="primary">Contactanos</v-btn>
+      <v-btn to="/contacto" height="50" width="200" color="primary">Contactanos</v-btn>
     </v-card-subtitle>
     <v-card-subtitle class="text-center">
       <h2 class="text-h5">Seguinos en las redes</h2>
@@ -30,7 +30,7 @@
       </v-row>
     </v-card-subtitle>
     <v-card-text class="d-flex justify-center">
-      <v-list dense color="transparent">
+      <v-list dense color="transparent"  class="list-footer-width">
           <v-list-item>
             <v-list-item-avatar>
               <v-img src="/icons/call.png"></v-img>
@@ -44,18 +44,18 @@
 
             </v-list-item-content>
           </v-list-item>
-          <v-list-item class="my-6">
+          <v-list-item>
             <v-list-item-avatar>
               <v-img src="/icons/pin.png"></v-img>
             </v-list-item-avatar>
             <v-list-item-content>
               <v-list-item-title class="font-weight-regular text-subtitle-1 mb-2">Visitanos</v-list-item-title>
               <v-divider></v-divider>
-              <v-list-item-subtitle class="body-2 font-weight-regular white--text">
+              <v-list-item-subtitle class="body-2 font-weight-regular white--text pa-2">
                 <b>Punta del Este: </b> San Francisco y Lunas de Oro <br> Lunes a viernes
                 10 a 18 hs Sábados 10 a 14 hs <br> Domingo cerrado
               </v-list-item-subtitle>
-              <v-list-item-subtitle class="body-2 font-weight-regular white--text mt-2">
+              <v-list-item-subtitle class="body-2 font-weight-regular white--text mt-2 pa-2">
                 <b>Maldonado: </b>Rincón 615 casi 3 de Febrero <br> Lunes a Viernes
                 de 9 a
                 13 hs y de 14 a 18 hs. <br> Sábado de 9 a 13 hs. Domingo cerrado
@@ -96,3 +96,10 @@
   }
 
 </script>
+<style scoped>
+@media(max-width:700px) {
+  .list-footer-width{
+    width: 100%;
+  }
+}
+</style>

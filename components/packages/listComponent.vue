@@ -10,7 +10,7 @@
           </GeneralCardTitleComponent>
         </GeneralCardComponent>
       </v-col>
-      <v-col class="col-md-4  col-12" v-for="pk in packageList.data" :key="pk.id">
+      <v-col class="col-md-3  col-12" v-for="pk in packageList.data" :key="pk.id">
         <GeneralCardComponent color="background-gradient" class="d-flex justify-space-between flex-column"
           min-height="440">
           <div>
@@ -20,7 +20,7 @@
                 Destacado</v-chip>
               <div v-html="setTile(pk.title)"></div>
             </GeneralCardTitleComponent>
-            <v-divider class="primary"></v-divider>
+            <v-divider class="cyan darken-1"></v-divider>
             <v-card-text>
               <v-list dense color="transparent">
                 <template v-for="(features,index) in pk.features">
@@ -103,7 +103,7 @@
             <v-icon>mdi-close</v-icon>
           </v-btn>
         </GeneralCardTitleComponent>
-        <v-divider class="primary"></v-divider>
+        <v-divider class="cyan darken-1"></v-divider>
         <v-card-text>
           <v-list dense color="transparent">
             <template v-for="(features,index) in seletedPackage.features">
@@ -128,7 +128,7 @@
             <GeneralCardTitleComponent class="primary--text">
               {{ index }}
             </GeneralCardTitleComponent>
-            <v-divider class="primary"></v-divider>
+            <v-divider class="cyan darken-1"></v-divider>
             <v-card-text>
               <v-row>
                 <v-col class="col-md-2 col-6" v-for="channel in channelCategories" :key="channel.id">

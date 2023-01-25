@@ -21,7 +21,7 @@
 
 <style scoped>
   .title {
-    border-left: 10px solid #ff8212;
+    border-left: 10px solid #00ACC1;
     padding-left: 5px;
   }
 

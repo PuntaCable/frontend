@@ -24,6 +24,17 @@ body {
     .secondary{
       background:linear-gradient(245deg, #311b92, #673ab7)!important;
     }
+    .primary--text{
+      background: -webkit-linear-gradient(120deg,#149199,#72b74c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+  
+    }
+    .primary{
+      background: linear-gradient(120deg,#149199,#72b74c);
+  
+    }
+
     .p-relative {
       position: relative;
     }
@@ -85,7 +96,7 @@ body {
 
 
     .border-color-top{
-      border-top:4px solid #ff8212
+      border-top:4px solid #00ACC1
     }
     .border-color-bottom{
       border-bottom:4px solid #ff8212

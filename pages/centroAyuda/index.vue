@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container class="mt-16 pt-12">
     <v-row>
       <v-col class="col-12">
         <GeneralCardComponent class="background-gradient">

@@ -1,49 +1,14 @@
 <template>
-  <v-container>
+  <v-container class="mt-16">
     <GeneralCardComponent color="background-gradient">
       <GeneralCardTitleComponent class="d-flex justify-center">
         Programacion
       </GeneralCardTitleComponent>
-      <v-divider class="primary"></v-divider>
+      <v-divider class="cyan darken-1"></v-divider>
       <v-card-text>
         <v-row no-gutters>
-      <v-col class="col-4 col-md-1 col-sm-3">
-        <v-col>
-          <v-card elevation="6" height="50px" color="#5e636ebf"
-            class="white--text d-flex text-center justify-center align-center">
-            <Span class="font-weight-regular">{{currentDay}}</Span>
-          </v-card>
-        </v-col>
-        <template v-if="(Object.keys(schedulesList).length>0)">
-          <v-col v-for="(schedules,index) in schedulesList" :key="index">
-            <v-card elevation="6" color="white" height="95px" width="100%" class="d-flex align-center white--text">
-              <v-img contain height="95px" width="100%"
-                :src="`https://appets.com.uy/files/?picture=`+schedules[0].channel.logo"></v-img>
-            </v-card>
-          </v-col>
-
-        </template>
-        <template v-else>
-          <v-col v-for="index in 6" :key="index">
-            <v-skeleton-loader type="image" height="95px"></v-skeleton-loader>
-          </v-col>
-        </template>
-
-      </v-col>
-      <v-col class="col-8 col-md-11 col-sm-10">
-        <v-row no-gutters class="overflow-auto" @scroll="scrollHandler" style="max-width:4944px">
-          <v-col class="col-12 d-inline-flex">
-            <v-col class="pl-0 pr-1 hourgrid white--text" v-for="hour in dailyHours" :key="hour">
-              <v-card elevation="6" height="50px" color="#5e636ebf" class="d-flex justify-center align-center">
-                <img contain height="30" width="30" src="/icons/clock.png"><span
-                  class="font-weight-regular white--text ">{{hour}}</span>
-              </v-card>
-            </v-col>
-          </v-col>
-          <schedulesChannelsComponent v-if="(Object.keys(schedulesList).length>0)" :schedulesList="schedulesList">
-          </schedulesChannelsComponent>
-          <schedulesChannelsLoadingComponent v-else></schedulesChannelsLoadingComponent>
-        </v-row>
+      <v-col class="col-12">
+        <iframe src="https://www.reportv.com.ar/finder/index/3226/" width="100%" height="800"></iframe>
       </v-col>
     </v-row>
 
