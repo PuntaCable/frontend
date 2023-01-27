@@ -7,7 +7,7 @@
     <v-card-text>
       <v-row>
         <v-col class="col-12">
-          <carousel :perPage="itemsPerPage" :loop="true" :paginationEnabled="false">
+          <carousel :perPage="itemsPerPage" autoplay :autoplayTimeout="4000" :loop="true" :paginationEnabled="false">
             <slide v-for="(item, index) in items" :key="index" style="width:30%" class=" px-2 transparent p-relative">
               <slot name="item" :item="item"></slot>
             </slide>

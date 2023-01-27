@@ -14,17 +14,20 @@ $main-font: 'Montserrat';
 body {
 
   .v-application {
-
+    .v-select__selections{
+      color:black!important;
+    }
     .background-gradient{
         background: #202020 !important
     }
     input{
       font-family: $main-font!important;
+      color:black!important;
     } 
     .secondary{
       background:linear-gradient(245deg, #311b92, #673ab7)!important;
     }
-    .primary--text{
+    .primary-gradient--text{
       background: -webkit-linear-gradient(120deg,#149199,#72b74c);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;

@@ -5,8 +5,8 @@
       <v-col class="col-12">
         <GeneralCardComponent color="background-gradient" flat>
           <GeneralCardTitleComponent>
-            ELEGI&nbsp;<span class="primary--text">PAQUETE</span>&nbsp;QUE MAS ENCAJE&nbsp;<span
-              class="primary--text">CON VOS!</span>
+            ELEGI&nbsp;<span class="primary-gradient--text">PAQUETE</span>&nbsp;QUE MAS ENCAJE&nbsp;<span
+              class="primary-gradient--text">CON VOS!</span>
           </GeneralCardTitleComponent>
         </GeneralCardComponent>
       </v-col>
@@ -125,7 +125,7 @@
         </v-card-text>
         <v-card-text v-for="(channelCategories,index) in channels" :key="index">
           <GeneralCardComponent outlined color="background-gradient">
-            <GeneralCardTitleComponent class="primary--text">
+            <GeneralCardTitleComponent class="primary-gradient--text">
               {{ index }}
             </GeneralCardTitleComponent>
             <v-divider class="cyan darken-1"></v-divider>
@@ -169,7 +169,7 @@
     methods: {
       setTile(title) {
         title = title.split(' ')
-        return `<span class='primary--text'>${title[0]}</span> ${title[1]} ${(title[2]) ? title[2] : ''}`
+        return `<span class='primary-gradient--text'>${title[0]}</span> ${title[1]} ${(title[2]) ? title[2] : ''}`
       },
       setPackage(pk) {
         this.seletedPackage = pk

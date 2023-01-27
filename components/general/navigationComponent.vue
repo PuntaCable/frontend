@@ -11,19 +11,19 @@
         <div>
           <v-btn outlined color="white" rounded class="font-weight-bold text-h6  rounded-lg">
             <img src="/icons/plus.png" alt="" width="30">
-            <span class="primary--text">television</span>
+            <span class="primary-gradient--text">television</span>
           </v-btn>
         </div>
         <div>
-          <v-btn outlined color="white" rounded class="font-weight-bold text-h6 rounded-lg">
+          <v-btn outlined color="white" href="https://reservaweb.servimatica.com.uy/" rounded class="font-weight-bold text-h6 rounded-lg">
             <img src="/icons/calendar.png" alt="" width="30">
-            <span class="font-weight-bold primary--text text-capitalize">Turnos</span>
+            <span class="font-weight-bold primary-gradient--text text-capitalize">Turnos</span>
             <span class="font-weight-bold blue--text text-capitalize">Online</span>
           </v-btn>
         </div>
       </v-toolbar-items>
     </v-app-bar>
-    <v-app-bar v-show="isMobile || scrollY>300" @scroll.native="checkScroll($e)" :fixed="!isMobile"
+    <v-app-bar v-show="isMobile || scrollY>100" @scroll.native="checkScroll($e)" :fixed="!isMobile"
       color="grey darken-4" height="100" elevation="0">
       <v-toolbar-title v-if="!isMobile">
         <router-link to="/">
@@ -35,13 +35,13 @@
         <div>
           <v-btn outlined color="white" rounded class="font-weight-bold text-h6  rounded-lg">
             <img src="/icons/plus.png" alt="" width="30">
-            <span class="primary--text">television</span>
+            <span class="primary-gradient--text">television</span>
           </v-btn>
         </div>
         <div>
-          <v-btn outlined color="white" rounded class="font-weight-bold text-h6 rounded-lg">
+          <v-btn outlined color="white" rounded href="https://reservaweb.servimatica.com.uy/" class="font-weight-bold text-h6 rounded-lg">
             <img src="/icons/calendar.png" alt="" width="30">
-            <span class="font-weight-bold primary--text text-capitalize">Turnos</span>
+            <span class="font-weight-bold primary-gradient--text text-capitalize">Turnos</span>
             <span class="font-weight-bold blue--text text-capitalize">Online</span>
           </v-btn>
         </div>

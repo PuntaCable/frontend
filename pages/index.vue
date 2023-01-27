@@ -16,7 +16,7 @@
         <v-col class="col-12">
           <GeneralCardComponent color="background-gradient" flat>
             <GeneralCardTitleComponent>
-              <span>DISFRUTALO</span>&nbsp;EN TODOS TUS&nbsp;<SPAN CLASS="primary--text">DISPOSITIVOS!</SPAN>
+              <span>DISFRUTALO</span>&nbsp;EN TODOS TUS&nbsp;<SPAN CLASS="primary-gradient--text">DISPOSITIVOS!</SPAN>
             </GeneralCardTitleComponent>
             <v-divider class="cyan darken-1"></v-divider>
             <v-card-text>
@@ -35,25 +35,46 @@
       </v-row>
     </v-container>
     <v-card class="border-color-top">
-      <v-img src="/prepago/background.png">
-        <div class="fill-width fill-height d-inline-flex justify-end align-center py-4">
+
+      <v-carousel hide-delimiters continuous cycle>
+    <v-carousel-item src="/slider/1.png" cover class="slider">
+      <div class="fill-height fill-width d-flex justify-md-end justify-center align-center align-md-center">
+        <generalTitleComponent>
+          <span class="primary-gradient--text">SEGUI LAS CARRERAS</span>
+          <br>
+          EN VIVO
+        </generalTitleComponent>
+      </div>
+    </v-carousel-item>
+    <v-carousel-item src="/slider/2.png" cover class="slider">
+      <div class="fill-height fill-width d-flex justify-md-end justify-center align-center align-md-center">
+        <generalTitleComponent>
+          <span class="primary-gradient--text">ESCUCHA TODAS TUS</span>
+          <br>
+          RADIOS
+        </generalTitleComponent>
+      </div>
+    </v-carousel-item>
+    <v-carousel-item src="/prepago/background.png" class="slider">
+      <div class="fill-width fill-height d-inline-flex justify-end align-center py-4">
           <v-row>
             <v-col class="col-12 col-md-7"></v-col>
             <v-col class="col-12 col-md-5 d-flex align-center flex-column">
               <generalTitleComponent>
-              <span class="primary--text">LA NUEVA FORMA</span>
+              <span class="primary-gradient--text">LA NUEVA FORMA</span>
                 <br>
                 DE VER TV
         </generalTitleComponent>
               <div>
-                <v-btn class="mt- font-weight-bold" rounded x-large color="primary">
+                <v-btn class="mt- font-weight-bold" rounded x-large color="primary" to="/contacto/?motivo=prepago">
                   CONTRATA tu prepago AHORA
                 </v-btn>
               </div>
             </v-col>
           </v-row>
         </div>
-      </v-img>
+    </v-carousel-item>
+  </v-carousel>
     </v-card>
   </div>
 </template>

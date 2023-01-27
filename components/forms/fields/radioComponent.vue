@@ -4,7 +4,7 @@
       :class="{'selected-radio':!active }">
       <v-radio readonly ref="checkbox" outlined class="rounded-lg ma-1" hide-details :value="value">
       </v-radio>&nbsp;<span class="text-h6 font-weight-regular"
-        :class="{'primary--text text--darken-1':active}">{{label}}</span>
+        :class="{'primary-gradient--text text--darken-1':active}">{{label}}</span>
     </div>
   </v-input>
 </template>

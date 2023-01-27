@@ -3,7 +3,7 @@
     <v-carousel-item src="/slider/1.png" class="slider">
       <div class="fill-height fill-width d-flex justify-md-end justify-center align-center align-md-center">
         <generalTitleComponent>
-          <span class="primary--text">SEGUI LAS CARRERAS</span>
+          <span class="primary-gradient--text">SEGUI LAS CARRERAS</span>
           <br>
           EN VIVO
 
@@ -13,7 +13,7 @@
     <v-carousel-item src="/slider/2.png" class="slider">
       <div class="fill-height fill-width d-flex justify-md-end justify-center align-center align-md-center">
         <generalTitleComponent>
-          <span class="primary--text">ESCUCHA TODAS TUS</span>
+          <span class="primary-gradient--text">ESCUCHA TODAS TUS</span>
           <br>
           RADIOS
         </generalTitleComponent>
