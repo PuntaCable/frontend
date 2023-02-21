@@ -14,13 +14,23 @@
             <span class="primary-gradient--text">television</span>
           </v-btn>
         </div>
-        <div>
+        <div class="ml-2">
           <v-btn outlined color="white" href="https://reservaweb.servimatica.com.uy/" rounded class="font-weight-bold text-h6 rounded-lg">
             <img src="/icons/calendar.png" alt="" width="30">
             <span class="font-weight-bold primary-gradient--text text-capitalize">Turnos</span>
             <span class="font-weight-bold blue--text text-capitalize">Online</span>
           </v-btn>
         </div>
+        <div class="ml-2">
+          <v-btn  height="38" color="white" outlined class="rounded-lg">
+              <img width="40" src="/icons/account.png">
+              &nbsp;&nbsp;
+              <span class="font-weight-regular white--text">Mi cuenta</span>
+            </v-btn>
+
+        </div>
+
+
       </v-toolbar-items>
     </v-app-bar>
     <v-app-bar v-show="isMobile || scrollY>100" @scroll.native="checkScroll($e)" :fixed="!isMobile"
@@ -32,19 +42,29 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="align-center" v-show="!isMobile" >
-        <div>
+        <div class="ml-2">
           <v-btn outlined color="white" rounded class="font-weight-bold text-h6  rounded-lg">
             <img src="/icons/plus.png" alt="" width="30">
             <span class="primary-gradient--text">television</span>
           </v-btn>
         </div>
-        <div>
+        <div class="ml-2">
           <v-btn outlined color="white" rounded href="https://reservaweb.servimatica.com.uy/" class="font-weight-bold text-h6 rounded-lg">
             <img src="/icons/calendar.png" alt="" width="30">
             <span class="font-weight-bold primary-gradient--text text-capitalize">Turnos</span>
             <span class="font-weight-bold blue--text text-capitalize">Online</span>
           </v-btn>
         </div>
+        <div class="ml-2">
+          <v-btn  height="38" color="primary" href="https://app-2np.pages.dev/" class="rounded-lg">
+              <img width="40" src="/icons/account.png">
+              &nbsp;&nbsp;
+              <span class="font-weight-regular white--text">Mi cuenta</span>
+            </v-btn>
+
+        </div>
+
+        
       </v-toolbar-items>
       <template v-slot:extension>
         <template v-if="isMobile">
