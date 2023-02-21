@@ -12,7 +12,7 @@
       </v-col>
       <v-col class="col-md-3  col-12" v-for="pk in packageList.data" :key="pk.id">
         <GeneralCardComponent color="background-gradient" class="d-flex justify-space-between flex-column"
-          min-height="440">
+          min-height="485">
           <div>
             <GeneralCardTitleComponent class="d-flex justify-center">
               <v-chip color="success" v-if="pk.featured" label small
@@ -53,47 +53,6 @@
         <v-btn block outlined rounded @click="(showMorePlans = true)">VER TODOS LOS PLANES</v-btn>
       </v-col>
     </v-row>
-    <v-expand-transition>
-      <v-row class="justify-center" v-show="showMorePlans">
-        <v-col class="col-md-4  col-12" v-for="pk in packageList.data" :key="pk.id">
-          <GeneralCardComponent color="background-gradient">
-            <GeneralCardTitleComponent class="d-flex justify-center">
-              <v-chip color="success" label small class="black--text font-weight-regular elevation-6 featured-chip">
-                Destacado</v-chip>
-              <div v-html="setTile(pk.title)"></div>
-            </GeneralCardTitleComponent>
-            <v-divider class="primary"></v-divider>
-            <v-card-text>
-              <v-list dense color="transparent">
-                <template v-for="(features,index) in pk.features">
-                  <v-list-item>
-                    <v-list-item-avatar>
-                      <img contain width="30px" src="/icons/check.png">
-                    </v-list-item-avatar>
-                    <v-list-item-title class="font-weight-light">{{features.feature}}</v-list-item-title>
-                  </v-list-item>
-                  <v-divider v-show="(index!=pk.features.length-1)"></v-divider>
-                </template>
-              </v-list>
-            </v-card-text>
-            <v-card-text>
-              <h1 class="font-weight-regular text-center">
-                <span class="text-subtitle-1 font-weight-bold mb-2">$</span>
-                {{pk.price}}
-              </h1>
-            </v-card-text>
-            <v-divider></v-divider>
-            <v-card-actions>
-              <v-btn block outlined rounded @click="setPackage(pk)">VER MAS</v-btn>
-            </v-card-actions>
-          </GeneralCardComponent>
-        </v-col>
-        <v-col class="col-12 col-md-12">
-          <v-btn block outlined rounded>VER TODOS LOS PLANES</v-btn>
-        </v-col>
-      </v-row>
-    </v-expand-transition>
-
     <v-dialog v-model="packagesModal" fullscreen max-width="700">
       <GeneralCardComponent color="background-gradient">
         <GeneralCardTitleComponent class="d-flex justify-center">
@@ -179,7 +138,11 @@
     },
     computed: {
       packageList() {
-        return this.$store.getters['packages/getList']
+        if(this.showMorePlans) {
+          return {data:this.$store.getters['packages/getList'].data}
+        } else {
+          return {data:this.$store.getters['packages/getList'].data.slice(0, 4)}
+        }
       },
       channels() {
         var channels = this.$store.getters['packages/get'].channels
