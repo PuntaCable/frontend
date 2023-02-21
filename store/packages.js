@@ -2,7 +2,9 @@ export const state = () => ({
   package: {
       channels:[]
   },
-  packagesList: {},
+  packagesList: {
+    data:[]
+  },
 })
 
 export const getters = {

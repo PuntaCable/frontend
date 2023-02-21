@@ -141,7 +141,7 @@
         if(this.showMorePlans) {
           return {data:this.$store.getters['packages/getList'].data}
         } else {
-          return {data:this.$store.getters['packages/getList'].data.slice(0, 4)}
+          return {data:this.$store.getters['packages/getList'].data?.slice(0, 4)}
         }
       },
       channels() {
