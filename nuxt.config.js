@@ -47,7 +47,10 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: 'https://puncable.codiq.net/api', 
+    
+    
+    //set url when is in production and when is in development 
+    baseURL: 'https://puncable.codiq.net/api'
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify

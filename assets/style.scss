@@ -94,7 +94,19 @@ body {
       z-index: 1;
     }
   
-  
+    .content {
+      span {
+        ::after{
+          display:none!important;
+        }
+      }
+      .span:last-child{
+        ::after{
+          display:none!important;
+        }
+      }
+
+    } 
     //borders
 
 

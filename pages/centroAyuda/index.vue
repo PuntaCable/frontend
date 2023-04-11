@@ -23,9 +23,10 @@
               <v-stepper-step editable step="2">Preguntas frecuentes</v-stepper-step>
               <v-stepper-content step="2">
                 <v-expansion-panels accordion>
-                  <v-expansion-panel v-for="(preguntaFrecuente,index) in preguntasFrecuentes" :key="index">
-                    <v-expansion-panel-header>{{ preguntaFrecuente.title }}</v-expansion-panel-header>
-                    <v-expansion-panel-content>{{ preguntaFrecuente.desc}}
+                  <v-expansion-panel v-for="(preguntaFrecuente,index) in answers.PreguntasFrecuentes" :key="index">
+                    <v-expansion-panel-header>{{ preguntaFrecuente.Pregunta }}</v-expansion-panel-header>
+                    <v-expansion-panel-content>
+                      <vue-markdown>{{ preguntaFrecuente.Contenido }}</vue-markdown>
                     </v-expansion-panel-content>
                   </v-expansion-panel>
                 </v-expansion-panels>
@@ -34,10 +35,10 @@
               <v-stepper-step editable step="3">Clientes</v-stepper-step>
               <v-stepper-content step="3">
                 <v-expansion-panels accordion>
-                  <v-expansion-panel v-for="(cliente,index) in clientes" :key="('c'+index)">
-                    <v-expansion-panel-header>{{ cliente.title }}</v-expansion-panel-header>
-                    <v-expansion-panel-content>
-                      {{ cliente.desc}}
+                  <v-expansion-panel v-for="(cliente,index) in answers.Clientes" :key="('c'+index)">
+                    <v-expansion-panel-header>{{ cliente.Pregunta }}</v-expansion-panel-header>
+                    <v-expansion-panel-content >
+                      <vue-markdown>{{ cliente.Contenido }}</vue-markdown>
                     </v-expansion-panel-content>
                   </v-expansion-panel>
                 </v-expansion-panels>
@@ -125,8 +126,18 @@
 </style>
 
 <script>
+  const _ = require('lodash');
+  import VueMarkdown from 'vue-markdown'
+
   export default {
+    components:{
+      VueMarkdown
+    },
     data: () => ({
+      answers:{
+        clientes:{},
+        PreguntasFrecuentes:{},
+      },
       clientes: [{
           title: 'Trámites',
           desc: 'Cualquier trámite que desees realizar ante Punta Cable podés hacerlo a través de nuestro Centro de Atención al Cliente 42 49 42 42 o al WhatsApp 2904 9235, también e mail: comercial@puntacable.com.uy y con nuestra App Móvil. Recordá tener a mano tu número de cliente. El mismo se encuentra en el margen superior derecho de la factura. Los trámites deberán ser realizados por personas mayores de 18 años.'
@@ -206,6 +217,17 @@
       ],
       option: 1,
     }),
+    created() {
+      this.getAnswers()
+    },
+    methods:{
+      getAnswers() {
+        this.$axios.get('/preguntas-frecuentes')
+          .then((data)=>{
+            this.answers =  _.groupBy(data.data.data, 'Categoria');
+          })
+      }
+    }
   }
 
 </script>
