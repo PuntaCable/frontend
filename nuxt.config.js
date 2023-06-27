@@ -50,7 +50,7 @@ export default {
     
     
     //set url when is in production and when is in development 
-    baseURL: 'https://puncable.codiq.net/api'
+    baseURL: 'https://puntacable.abunda.uy/api'
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
