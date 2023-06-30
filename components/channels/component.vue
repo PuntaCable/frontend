@@ -12,7 +12,7 @@
       <v-card color="transparent flat">
         <v-card class="rounded-xl" color="white d-flex justify-center align-center">
           <v-img class="transparent" height="140px" width="auto" style="max-width:100%" contain
-            :src="(`https://appets.com.uy/files/?picture=`+item.logo)"></v-img>
+            :src="(`https://www.reportv.com.ar/buscador/img/Logos/`+item.logo)"></v-img>
         </v-card>
         <v-card-title class="body-2 font-weight-regular white--text pt-2 pb-0 pl-2 text-truncate">
           {{item.name}}

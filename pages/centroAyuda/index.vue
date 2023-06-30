@@ -23,30 +23,18 @@
               <v-stepper-step editable step="2">Preguntas frecuentes</v-stepper-step>
               <v-stepper-content step="2">
                 <v-expansion-panels accordion>
-                  <v-expansion-panel v-for="(preguntaFrecuente,index) in answers.PreguntasFrecuentes" :key="index">
-                    <v-expansion-panel-header>{{ preguntaFrecuente.Pregunta }}</v-expansion-panel-header>
-                    <v-expansion-panel-content>
-                      <vue-markdown>{{ preguntaFrecuente.Contenido }}</vue-markdown>
-                    </v-expansion-panel-content>
-                  </v-expansion-panel>
-                </v-expansion-panels>
-
-              </v-stepper-content>
-              <v-stepper-step editable step="3">Clientes</v-stepper-step>
-              <v-stepper-content step="3">
-                <v-expansion-panels accordion>
-                  <v-expansion-panel v-for="(cliente,index) in answers.Clientes" :key="('c'+index)">
-                    <v-expansion-panel-header>{{ cliente.Pregunta }}</v-expansion-panel-header>
+                  <v-expansion-panel v-for="(answer,index) in answers" :key="('c'+index)">
+                    <v-expansion-panel-header>{{ answer.Pregunta }}</v-expansion-panel-header>
                     <v-expansion-panel-content >
-                      <vue-markdown>{{ cliente.Contenido }}</vue-markdown>
+                      <vue-markdown>{{ answer.Contenido }}</vue-markdown>
                     </v-expansion-panel-content>
                   </v-expansion-panel>
                 </v-expansion-panels>
               </v-stepper-content>
 
 
-              <v-stepper-step editable step="4">Servicio tecnico</v-stepper-step>
-              <v-stepper-content step="4">
+              <v-stepper-step editable step="3">Servicio tecnico</v-stepper-step>
+              <v-stepper-content step="3">
                 <p>Antes de realizar cualquier consulta podés verificar si tu inconveniente técnico no está encuadrado
                   dentro de los desperfectos frecuentes, así podes solucionarlo vos mismo consultando en esta página en
                   el
@@ -224,7 +212,7 @@
       getAnswers() {
         this.$axios.get('/preguntas-frecuentes')
           .then((data)=>{
-            this.answers =  _.groupBy(data.data.data, 'Categoria');
+            this.answers =  data.data.data
           })
       }
     }
